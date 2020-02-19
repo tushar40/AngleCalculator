@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED12EE5723FC62BB000377C9 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED12EE5623FC62BB000377C9 /* DrawView.swift */; };
+		ED12EE5923FC6317000377C9 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED12EE5823FC6317000377C9 /* Circle.swift */; };
 		ED78E75623FC547600F0DDB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED78E75523FC547600F0DDB6 /* AppDelegate.swift */; };
 		ED78E75823FC547600F0DDB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED78E75723FC547600F0DDB6 /* SceneDelegate.swift */; };
 		ED78E75A23FC547600F0DDB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED78E75923FC547600F0DDB6 /* ViewController.swift */; };
 		ED78E75D23FC547600F0DDB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED78E75B23FC547600F0DDB6 /* Main.storyboard */; };
 		ED78E75F23FC547700F0DDB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED78E75E23FC547700F0DDB6 /* Assets.xcassets */; };
 		ED78E76223FC547700F0DDB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED78E76023FC547700F0DDB6 /* LaunchScreen.storyboard */; };
+		ED78E76B23FC575300F0DDB6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED78E76A23FC575300F0DDB6 /* AVFoundation.framework */; };
+		ED78E76D23FC5AFC00F0DDB6 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED78E76C23FC5AFC00F0DDB6 /* Line.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED12EE5623FC62BB000377C9 /* DrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
+		ED12EE5823FC6317000377C9 /* Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
 		ED78E75223FC547600F0DDB6 /* AngleCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AngleCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED78E75523FC547600F0DDB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED78E75723FC547600F0DDB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +30,8 @@
 		ED78E75E23FC547700F0DDB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED78E76123FC547700F0DDB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED78E76323FC547700F0DDB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED78E76A23FC575300F0DDB6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		ED78E76C23FC5AFC00F0DDB6 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED78E76B23FC575300F0DDB6 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED12EE5A23FC67CE000377C9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ED12EE5623FC62BB000377C9 /* DrawView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ED12EE5B23FC691D000377C9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				ED78E75923FC547600F0DDB6 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		ED78E74923FC547600F0DDB6 = {
 			isa = PBXGroup;
 			children = (
 				ED78E75423FC547600F0DDB6 /* AngleCalculator */,
 				ED78E75323FC547600F0DDB6 /* Products */,
+				ED78E76923FC575300F0DDB6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +82,34 @@
 		ED78E75423FC547600F0DDB6 /* AngleCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				ED78E76E23FC5B0C00F0DDB6 /* Models */,
+				ED12EE5A23FC67CE000377C9 /* Views */,
+				ED12EE5B23FC691D000377C9 /* ViewControllers */,
 				ED78E75523FC547600F0DDB6 /* AppDelegate.swift */,
 				ED78E75723FC547600F0DDB6 /* SceneDelegate.swift */,
-				ED78E75923FC547600F0DDB6 /* ViewController.swift */,
 				ED78E75B23FC547600F0DDB6 /* Main.storyboard */,
 				ED78E75E23FC547700F0DDB6 /* Assets.xcassets */,
 				ED78E76023FC547700F0DDB6 /* LaunchScreen.storyboard */,
 				ED78E76323FC547700F0DDB6 /* Info.plist */,
 			);
 			path = AngleCalculator;
+			sourceTree = "<group>";
+		};
+		ED78E76923FC575300F0DDB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED78E76A23FC575300F0DDB6 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED78E76E23FC5B0C00F0DDB6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ED78E76C23FC5AFC00F0DDB6 /* Line.swift */,
+				ED12EE5823FC6317000377C9 /* Circle.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +184,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED78E75A23FC547600F0DDB6 /* ViewController.swift in Sources */,
+				ED12EE5723FC62BB000377C9 /* DrawView.swift in Sources */,
+				ED78E76D23FC5AFC00F0DDB6 /* Line.swift in Sources */,
 				ED78E75623FC547600F0DDB6 /* AppDelegate.swift in Sources */,
 				ED78E75823FC547600F0DDB6 /* SceneDelegate.swift in Sources */,
+				ED12EE5923FC6317000377C9 /* Circle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
